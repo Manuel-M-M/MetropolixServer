@@ -1,0 +1,12 @@
+{
+    "name": "manuel/server",
+    "authors": [
+        {
+            "name": "Manuel-M-M",
+            "email": "mmoragamolina@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9"
+    }
+}
