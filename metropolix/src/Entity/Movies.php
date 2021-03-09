@@ -92,6 +92,11 @@ class Movies
      */
     private $cast;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $genre;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -273,6 +278,18 @@ class Movies
     public function setCast(string $cast): self
     {
         $this->cast = $cast;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): self
+    {
+        $this->genre = $genre;
 
         return $this;
     }
