@@ -19,10 +19,26 @@ class MoviesRepository extends ServiceEntityRepository
         parent::__construct($registry, Movies::class);
     }
 
+    
+
     // /**
     //  * @return Movies[] Returns an array of Movies objects
     //  */
+    
+
+     public function findByPage($page)
+    {
+        $first = ($page - 1 ) * 20;
+        return $this->createQueryBuilder('m')
+            ->setFirstResult($first)
+            ->setMaxResults(20)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     /*
+
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('m')
