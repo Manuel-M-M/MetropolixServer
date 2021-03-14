@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -50,16 +48,6 @@ class User implements UserInterface
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $token_expiration;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Favourites::class, mappedBy="user_id")
-     */
-    private $favourites;
-
-    public function __construct()
-    {
-        $this->favourites = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -169,33 +157,6 @@ class User implements UserInterface
     public function setTokenExpiration(\DateTimeInterface $token_expiration): self
     {
         $this->token_expiration = $token_expiration;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Favourites[]
-     */
-    public function getFavourites(): Collection
-    {
-        return $this->favourites;
-    }
-
-    public function addFavourite(Favourites $favourite): self
-    {
-        if (!$this->favourites->contains($favourite)) {
-            $this->favourites[] = $favourite;
-            $favourite->addUserId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeFavourite(Favourites $favourite): self
-    {
-        if ($this->favourites->removeElement($favourite)) {
-            $favourite->removeUserId($this);
-        }
 
         return $this;
     }

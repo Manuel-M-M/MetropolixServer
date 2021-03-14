@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\MoviesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -98,20 +96,6 @@ class Movies
      * @ORM\Column(type="string", length=255)
      */
     private $genre;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Favourites::class, mappedBy="movie_id")
-     */
-    private $favoritas;
-
-    public function __construct()
-    {
-        $this->favoritas = new ArrayCollection();
-    }
-
-    
-
-    
 
     public function getId(): ?int
     {
@@ -309,33 +293,4 @@ class Movies
 
         return $this;
     }
-
-    /**
-     * @return Collection|Favourites[]
-     */
-    public function getFavoritas(): Collection
-    {
-        return $this->favoritas;
-    }
-
-    public function addFavorita(Favourites $favorita): self
-    {
-        if (!$this->favoritas->contains($favorita)) {
-            $this->favoritas[] = $favorita;
-            $favorita->addMovieId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeFavorita(Favourites $favorita): self
-    {
-        if ($this->favoritas->removeElement($favorita)) {
-            $favorita->removeMovieId($this);
-        }
-
-        return $this;
-    }
-
-    
 }
