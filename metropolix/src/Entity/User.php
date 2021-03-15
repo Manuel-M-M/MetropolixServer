@@ -52,7 +52,8 @@ class User implements UserInterface
     private $token_expiration;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Favourites::class, mappedBy="user_id")
+     * @ORM\ManyToMany(targetEntity=Movies::class, inversedBy="users")
+     * @ORM\JoinTable(name="favourites")
      */
     private $favourites;
 
@@ -174,29 +175,28 @@ class User implements UserInterface
     }
 
     /**
-     * @return Collection|Favourites[]
+     * @return Collection|Movies[]
      */
     public function getFavourites(): Collection
     {
         return $this->favourites;
     }
 
-    public function addFavourite(Favourites $favourite): self
+    public function addFavourite(Movies $favourite): self
     {
         if (!$this->favourites->contains($favourite)) {
             $this->favourites[] = $favourite;
-            $favourite->addUserId($this);
         }
 
         return $this;
     }
 
-    public function removeFavourite(Favourites $favourite): self
+    public function removeFavourite(Movies $favourite): self
     {
-        if ($this->favourites->removeElement($favourite)) {
-            $favourite->removeUserId($this);
-        }
+        $this->favourites->removeElement($favourite);
 
         return $this;
     }
+
+    
 }

@@ -100,13 +100,15 @@ class Movies
     private $genre;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Favourites::class, mappedBy="movie_id")
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="favourites")
      */
-    private $favourites;
+    private $users;
+
+    
 
     public function __construct()
     {
-        $this->favourites = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -307,29 +309,31 @@ class Movies
     }
 
     /**
-     * @return Collection|Favourites[]
+     * @return Collection|User[]
      */
-    public function getFavourites(): Collection
+    public function getUsers(): Collection
     {
-        return $this->favourites;
+        return $this->users;
     }
 
-    public function addFavourite(Favourites $favourite): self
+    public function addUser(User $user): self
     {
-        if (!$this->favourites->contains($favourite)) {
-            $this->favourites[] = $favourite;
-            $favourite->addMovieId($this);
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addFavourite($this);
         }
 
         return $this;
     }
 
-    public function removeFavourite(Favourites $favourite): self
+    public function removeUser(User $user): self
     {
-        if ($this->favourites->removeElement($favourite)) {
-            $favourite->removeMovieId($this);
+        if ($this->users->removeElement($user)) {
+            $user->removeFavourite($this);
         }
 
         return $this;
     }
+
+    
 }

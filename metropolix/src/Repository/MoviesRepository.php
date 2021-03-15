@@ -25,12 +25,27 @@ class MoviesRepository extends ServiceEntityRepository
     //  * @return Movies[] Returns an array of Movies objects
     //  */
     
-
      public function findByPage($page)
     {
         $first = ($page - 1 ) * 20;
         return $this->createQueryBuilder('m')
             ->setFirstResult($first)
+            ->setMaxResults(20)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    // /**
+    //  * @return Details[] Returns an array of Movies objects
+    //  */
+    
+
+    public function searchByTitle($title)
+    {
+        return $this->createQueryBuilder('m')
+            ->andWhere('m.title LIKE :val')
+            ->setParameter('val', $title.'%')
             ->setMaxResults(20)
             ->getQuery()
             ->getResult()
