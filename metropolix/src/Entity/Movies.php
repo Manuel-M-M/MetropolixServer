@@ -102,13 +102,25 @@ class Movies
     /**
      * @ORM\ManyToMany(targetEntity=User::class, mappedBy="favourites")
      */
-    private $users;
+    private $favouritesUsers;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="seens")
+     */
+    private $seensUsers;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="pendings")
+     */
+    private $pendingsUser;
 
     
 
     public function __construct()
     {
         $this->users = new ArrayCollection();
+        $this->seensUsers = new ArrayCollection();
+        $this->pendingsUser = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -311,25 +323,79 @@ class Movies
     /**
      * @return Collection|User[]
      */
-    public function getUsers(): Collection
+    public function getFavouritesUsers(): Collection
     {
-        return $this->users;
+        return $this->favouritesUsers;
     }
 
-    public function addUser(User $user): self
+    public function addFavouritesUser(User $user): self
     {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
+        if (!$this->favouritesUsers->contains($user)) {
+            $this->favouritesUsers[] = $user;
             $user->addFavourite($this);
         }
 
         return $this;
     }
 
-    public function removeUser(User $user): self
+    public function removeFavouritesUser(User $user): self
     {
-        if ($this->users->removeElement($user)) {
+        if ($this->favouritesUsers->removeElement($user)) {
             $user->removeFavourite($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getSeensUsers(): Collection
+    {
+        return $this->seensUsers;
+    }
+
+    public function addSeensUser(User $seensUser): self
+    {
+        if (!$this->seensUsers->contains($seensUser)) {
+            $this->seensUsers[] = $seensUser;
+            $seensUser->addSeen($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSeensUser(User $seensUser): self
+    {
+        if ($this->seensUsers->removeElement($seensUser)) {
+            $seensUser->removeSeen($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getPendingsUser(): Collection
+    {
+        return $this->pendingsUser;
+    }
+
+    public function addPendingsUser(User $pendingsUser): self
+    {
+        if (!$this->pendingsUser->contains($pendingsUser)) {
+            $this->pendingsUser[] = $pendingsUser;
+            $pendingsUser->addPending($this);
+        }
+
+        return $this;
+    }
+
+    public function removePendingsUser(User $pendingsUser): self
+    {
+        if ($this->pendingsUser->removeElement($pendingsUser)) {
+            $pendingsUser->removePending($this);
         }
 
         return $this;

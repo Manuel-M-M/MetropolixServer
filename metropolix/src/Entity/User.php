@@ -57,9 +57,23 @@ class User implements UserInterface
      */
     private $favourites;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Movies::class, inversedBy="seensUsers")
+     * @ORM\JoinTable(name="seens")
+     */
+    private $seens;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Movies::class, inversedBy="pendingsUser")
+     * @ORM\JoinTable(name="pendings")
+     */
+    private $pendings;
+
     public function __construct()
     {
         $this->favourites = new ArrayCollection();
+        $this->seens = new ArrayCollection();
+        $this->pendings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -194,6 +208,54 @@ class User implements UserInterface
     public function removeFavourite(Movies $favourite): self
     {
         $this->favourites->removeElement($favourite);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Movies[]
+     */
+    public function getSeens(): Collection
+    {
+        return $this->seens;
+    }
+
+    public function addSeen(Movies $seen): self
+    {
+        if (!$this->seens->contains($seen)) {
+            $this->seens[] = $seen;
+        }
+
+        return $this;
+    }
+
+    public function removeSeen(Movies $seen): self
+    {
+        $this->seens->removeElement($seen);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Movies[]
+     */
+    public function getPendings(): Collection
+    {
+        return $this->pendings;
+    }
+
+    public function addPending(Movies $pending): self
+    {
+        if (!$this->pendings->contains($pending)) {
+            $this->pendings[] = $pending;
+        }
+
+        return $this;
+    }
+
+    public function removePending(Movies $pending): self
+    {
+        $this->pendings->removeElement($pending);
 
         return $this;
     }
