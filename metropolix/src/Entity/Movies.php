@@ -114,6 +114,11 @@ class Movies
      */
     private $pendingsUser;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="movie", orphanRemoval=true)
+     */
+    private $comments;
+
     
 
     public function __construct()
@@ -121,6 +126,7 @@ class Movies
         $this->users = new ArrayCollection();
         $this->seensUsers = new ArrayCollection();
         $this->pendingsUser = new ArrayCollection();
+        $this->comments = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -396,6 +402,36 @@ class Movies
     {
         if ($this->pendingsUser->removeElement($pendingsUser)) {
             $pendingsUser->removePending($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Comments[]
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comments $comment): self
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments[] = $comment;
+            $comment->setMovie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comments $comment): self
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getMovie() === $this) {
+                $comment->setMovie(null);
+            }
         }
 
         return $this;

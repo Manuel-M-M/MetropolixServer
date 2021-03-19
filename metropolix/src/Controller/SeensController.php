@@ -8,17 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use \App\Repository\MoviesRepository;
 
-class FavouritesController extends AbstractController
+class SeensController extends AbstractController
 {
-    /**
-     * @Route("/addFavourites/{id}", name="addFavourites")
+     /**
+     * @Route("/addSeens/{id}", name="addSeens")
      */
     public function addFavourite($id, MoviesRepository $repo,  EntityManagerInterface $em): Response
     {
         $movie= [];
         $movieEntity = $repo->find($id);
         $user = $this->getUser();
-        $user->addFavourite($movieEntity); 
+        $user->addSeen($movieEntity); 
 
         $em->persist($user);
         $em->flush();
@@ -26,18 +26,18 @@ class FavouritesController extends AbstractController
     }
 
     /**
-     * @Route("/getFavourites", name="getFavourites")
+     * @Route("/getSeens", name="getSeens")
      */
-    public function getFavourite(): Response
+    public function getSeen(): Response
     {
         $movies= [];
         $user = $this->getUser();
-        $favourites = $user->getFavourites(); 
-        foreach($favourites as $favourite) {
+        $seens = $user->getSeens(); 
+        foreach($seens as $seen) {
             $movie = [];
-            $movie['id'] = $favourite->getId();
-            $movie['title'] = $favourite->getTitle();
-            $movie['poster_path'] = $favourite->getPosterPath();
+            $movie['id'] = $seen->getId();
+            $movie['title'] = $seen->getTitle();
+            $movie['poster_path'] = $seen->getPosterPath();
             
             $movies[] = $movie;          
         }
@@ -45,27 +45,28 @@ class FavouritesController extends AbstractController
     }
 
     /**
-     * @Route("/removeFavourites/{id}", name="removeFavourites")
+     * @Route("/removeSeens/{id}", name="removeSeens")
      */
-    public function removeFavourite($id, MoviesRepository $repo,  EntityManagerInterface $em): Response
+    public function removeSeen($id, MoviesRepository $repo,  EntityManagerInterface $em): Response
     {
         $movies= [];
         $movieEntity = $repo->find($id);
         $user = $this->getUser();
-        $user->removeFavourite($movieEntity); 
+        $user->removeSeen($movieEntity); 
 
         $em->persist($user);
         $em->flush();
 
-        $favourites = $user->getFavourites();
-        foreach($favourites as $favourite) {
+        $seens = $user->getSeens();
+        foreach($seens as $seen) {
             $movie = [];
-            $movie['id'] = $favourite->getId();
-            $movie['title'] = $favourite->getTitle();
-            $movie['poster_path'] = $favourite->getPosterPath();
+            $movie['id'] = $seen->getId();
+            $movie['title'] = $seen->getTitle();
+            $movie['poster_path'] = $seen->getPosterPath();
           
             $movies[] = $movie;          
         }
         return $this->json($movies);
+
     }
 }
