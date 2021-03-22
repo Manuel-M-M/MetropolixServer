@@ -35,7 +35,7 @@ class CoomentsController extends AbstractController
     /**
      * @Route("/getComments/{id}", name="getComments")
      */
-    public function getCooment($id, MoviesRepository $repo): Response
+    public function getComent($id, MoviesRepository $repo): Response
     {
         $commentsArray= [];
         $movie = $repo->find($id);
@@ -44,8 +44,8 @@ class CoomentsController extends AbstractController
             $commentArray = [];
             $commentArray['id'] = $comment->getId();
             $commentArray['text'] = $comment->getText();
-            $commentArray['date'] = $comment->getDate();
-            $commentArray['user'] = $comment->getUser()->getUsername();
+            $commentArray['date'] = $comment->getDate()->format('Y-m-d');
+            $commentArray['user'] = $comment->getUser()->getRealUsername();
             
             $commentsArray[] = $commentArray;          
         }

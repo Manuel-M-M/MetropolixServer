@@ -36,6 +36,26 @@ class MoviesRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findTop20Popularity()
+    {
+        return $this->createQueryBuilder('m')
+            ->orderBy('m.popularity', 'DESC')
+            ->setMaxResults(20)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function findTop20Rated()
+    {
+        return $this->createQueryBuilder('m')
+            ->orderBy('m.popularity', 'DESC')
+            ->setMaxResults(20)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     // /**
     //  * @return Details[] Returns an array of Movies objects
     //  */
