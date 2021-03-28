@@ -6,18 +6,18 @@ _CÓDIGO DE SERVIDOR. Web para amantes del buen cine. Buscador de películas, ap
 
 ## Starting / Comenzando 🚀
 
-_1. Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_
-_2. Run composer install to install the components ._
-_3. In the .env file, configure the database connection data and other necessary variables._
-_4. Create database: php bin/console doctrine:database:create_
+_1. Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_  
+_2. Run composer install to install the components ._  
+_3. In the .env file, configure the database connection data and other necessary variables._  
+_4. Create database: php bin/console doctrine:database:create_  
 _5. Import file: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql_
 
 See ** Deployment ** to know how to deploy the project. 
 
-_1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_
-_2. Ejecutar composer install para instalar los componentes._
-_3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias._
-_4. Crear base de datos: php bin/console doctrine:database:create_
+_1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_  
+_2. Ejecutar composer install para instalar los componentes._  
+_3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias._  
+_4. Crear base de datos: php bin/console doctrine:database:create_  
 _5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql_
 
 Mira **Despliegue** para conocer como desplegar el proyecto.
