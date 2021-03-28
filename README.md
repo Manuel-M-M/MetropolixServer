@@ -27,7 +27,7 @@ y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con 
 5. Import file: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
 ```
 ```
-See ** Deployment ** to know how to deploy the project. 
+See Deployment to know how to deploy the project. 
 ```
 ```
 1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
@@ -37,7 +37,7 @@ See ** Deployment ** to know how to deploy the project.
 5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
 ```
 ```
-Mira **Despliegue** para conocer como desplegar el proyecto.
+Mira Despliegue para conocer como desplegar el proyecto.
 ```
 
 ### Pre-requisitos 📋
@@ -116,7 +116,7 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 ## Author / Autor ✒️
 
 ```
-* **Manuel Moraga Molina**
+- Manuel Moraga Molina
 ``` 
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
@@ -136,7 +136,5 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ---
 ```
-⌨️ with ❤️ por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
-
-⌨️ con ❤️ por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
+⌨️ with / con ❤️ by / por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
 ```
