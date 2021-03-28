@@ -20,21 +20,21 @@ y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con 
 ## Starting / Comenzando 🚀
 
 ```
-_1. Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_  
-_2. Run composer install to install the components ._  
-_3. In the .env file, configure the database connection data and other necessary variables._  
-_4. Create database: php bin/console doctrine:database:create_  
-_5. Import file: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql_
+1. Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
+2. Run composer install to install the components. 
+3. In the .env file, configure the database connection data and other necessary variables.  
+4. Create database: php bin/console doctrine:database:create 
+5. Import file: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
 ```
 ```
 See ** Deployment ** to know how to deploy the project. 
 ```
 ```
-_1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git_  
-_2. Ejecutar composer install para instalar los componentes._  
-_3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias._  
-_4. Crear base de datos: php bin/console doctrine:database:create_  
-_5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql_
+1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
+2. Ejecutar composer install para instalar los componentes.  
+3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
+4. Crear base de datos: php bin/console doctrine:database:create 
+5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
 ```
 ```
 Mira **Despliegue** para conocer como desplegar el proyecto.
@@ -93,7 +93,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 ## Built with / Construido con 🛠️
 
 ```
-_PHP, SYMFONY, DOCTRINE, MYSQL_
+PHP, SYMFONY, DOCTRINE, MYSQL
 ```
 ```
 * [PHP](https://www.php.net/) - Programming language / Lenguaje de programación 
@@ -135,6 +135,8 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
+```
 ⌨️ with ❤️ por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
 
 ⌨️ con ❤️ por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
+```
