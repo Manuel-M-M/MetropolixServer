@@ -96,30 +96,17 @@ _Agrega notas adicionales sobre como hacer deploy_
 PHP, SYMFONY, DOCTRINE, MYSQL
 ```
 ```
-* [PHP](https://www.php.net/) - Programming language / Lenguaje de programación 
-* [SYMFONY](https://symfony.com/) - The framework used / El framework usado
-* [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database / Usado para manejar la base de datos
+- [PHP](https://www.php.net/) - Programming language / Lenguaje de programación 
+- [SYMFONY](https://symfony.com/) - The framework used / El framework usado
+- [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database / Usado para manejar la base de datos
+- [MYSQL](https://www.mysql.com/) - Database / Base de datos
 ```
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
 
 ## Author / Autor ✒️
 
 ```
 - Manuel Moraga Molina
 ``` 
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
