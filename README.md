@@ -1,8 +1,11 @@
 # MetropolixServer
 
+```
 _SERVER CODE. Web for lovers of good cinema. Movie search engine, filtered sections for the most popular and best rated movies, details of each of them with image, video and all the necessary data so that you know the film perfectly. For registered users, management of lists of favorite films, views and pending, as well as the possibility of adding comments on the films, which will be visible in their details, and access to the Metropolix real-time chat to exchange impressions with the rest of the users._
-
+```
+```
 _CÓDIGO DE SERVIDOR. Web para amantes del buen cine. Buscador de películas, apartados filtrados para las películas más populares y mejor valoradas, detalle de cada una de ellas con imagen, vídeo y todos los datos necesarios para que conozcas la película a la perfección. Para usuarios registrados, gestión de listas de películas favoritas, vistas y pendientes, así como la posibilidad de añadir comentarios sobre las películas, que serán visibles en sus datos, y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con el resto de los usuarios._ 
+```
 
 ## Starting / Comenzando 🚀
 
@@ -86,7 +89,7 @@ _PHP, SYMFONY, DOCTRINE, MYSQL_
 * [PHP](https://www.php.net/) - Programming language / Lenguaje de programación 
 * [SYMFONY](https://symfony.com/) - The framework used / El framework usado
 * [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database / Usado para manejar la base de datos
-* ```
+```
 
 ## Contribuyendo 🖇️
 
