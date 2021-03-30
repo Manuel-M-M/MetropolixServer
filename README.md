@@ -25,7 +25,7 @@ de los usuarios.
 2. Run composer install to install the components. 
 3. In the .env file, configure the database connection data and other necessary variables.  
 4. Create database: php bin/console doctrine:database:create 
-5. Import file: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
+5. Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 ```
 ```
 See Deployment to know how to deploy the project. 
@@ -35,7 +35,7 @@ See Deployment to know how to deploy the project.
 2. Ejecutar composer install para instalar los componentes.  
 3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
 4. Crear base de datos: php bin/console doctrine:database:create 
-5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/combis_db.sql
+5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 ```
 ```
 Mira Despliegue para conocer como desplegar el proyecto.
