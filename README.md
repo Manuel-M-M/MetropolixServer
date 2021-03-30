@@ -26,6 +26,7 @@ de los usuarios.
 3. In the .env file, configure the database connection data and other necessary variables.  
 4. Create database: php bin/console doctrine:database:create 
 5. Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
+6. In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
 ```
 ```
 See Deployment to know how to deploy the project. 
@@ -36,6 +37,7 @@ See Deployment to know how to deploy the project.
 3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
 4. Crear base de datos: php bin/console doctrine:database:create 
 5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
+6. En el archivo .env en DATABASE_URL introduce tu usuario y contraseña y el nombre de la db si lo cambias
 ```
 ```
 Mira Despliegue para conocer como desplegar el proyecto.
