@@ -20,10 +20,12 @@ class MoviesController extends AbstractController
     {
         $httpClient = HttpClient::create();
         $queryResponse = $httpClient->request('GET','https://api.themoviedb.org/3/movie/top_rated?api_key=yourApiKey&language=en-US&page=10');
+        
         $content = $queryResponse->getContent();
+
         $contentArray = json_decode($content);
         $movies = $contentArray->results;
-
+        
          foreach ($movies as $m) {
            dump($movies);
              $movie = new Movies();
@@ -34,17 +36,17 @@ class MoviesController extends AbstractController
              $movie -> setReleaseDate($m->release_date);
              $movie -> setVoteAverage($m->vote_average);
              $movie -> setVoteCount($m->vote_count);        
-             $movie -> setPosterPath('https://image.tmdb.org/t/p/w300/' . $m->poster_path . '?api_key=7yourApiKey&language=en-US');
-             $movie -> setBackdropPath('https://image.tmdb.org/t/p/w300/' . $m->backdrop_path . '?api_key=7yourApiKey&language=en-US');
+             $movie -> setPosterPath('https://image.tmdb.org/t/p/w300/' . $m->poster_path . '?api_key=yourApiKey&language=en-US');
+             $movie -> setBackdropPath('https://image.tmdb.org/t/p/w300/' . $m->backdrop_path . '?api_key=yourApiKey&language=en-US');
 
         $tmdb_id = $m->id;
-        $queryDetails = $httpClient->request('GET','https://api.themoviedb.org/3/movie/'. $tmdb_id  .'?api_key=7yourApiKey&language=en-US');
-
+        $queryDetails = $httpClient->request('GET','https://api.themoviedb.org/3/movie/'. $tmdb_id  .'?api_key=yourApiKey&language=en-US');
+        
         $details = $queryDetails->getContent();
         $details = json_decode($details);
         dump($details);
         $movie -> setRuntime($details->runtime);
-    
+        
         $em->persist($movie);
                
          }
@@ -86,8 +88,6 @@ class MoviesController extends AbstractController
             
         }
         return $this->json($movies);
-
-        
     }
 
 
@@ -99,7 +99,7 @@ class MoviesController extends AbstractController
         $details = [];
         $id = $request->query->get('id');
         $movieEntity = $repo->find($id);
-        
+    
             $movie = [];
             $movie['id'] = $movieEntity->getId();
             $movie['title'] = $movieEntity->getTitle();
@@ -118,9 +118,13 @@ class MoviesController extends AbstractController
             $movie['writer'] = $movieEntity->getWriter();
             $movie['cast'] = $movieEntity->getCast();
             $movie['genre'] = $movieEntity->getGenre();
-  
+
+            
+            dump($movie);
+        
         return $this->json($movie);   
     }
+
 
     /**
      * @Route("/Search", name="Search")
@@ -154,6 +158,5 @@ class MoviesController extends AbstractController
             
         }
         return $this->json($movies);
-   
     }
 }
