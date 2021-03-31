@@ -20,15 +20,10 @@ class MoviesController extends AbstractController
     {
         $httpClient = HttpClient::create();
         $queryResponse = $httpClient->request('GET','https://api.themoviedb.org/3/movie/top_rated?api_key=yourApiKey&language=en-US&page=10');
-        // $data = json_decode();
-        
-
         $content = $queryResponse->getContent();
-
         $contentArray = json_decode($content);
         $movies = $contentArray->results;
-        // $data = json_decode();
-          //dump($content);
+
          foreach ($movies as $m) {
            dump($movies);
              $movie = new Movies();
@@ -44,14 +39,12 @@ class MoviesController extends AbstractController
 
         $tmdb_id = $m->id;
         $queryDetails = $httpClient->request('GET','https://api.themoviedb.org/3/movie/'. $tmdb_id  .'?api_key=7yourApiKey&language=en-US');
-        //  = json_decode();
-        
+
         $details = $queryDetails->getContent();
         $details = json_decode($details);
         dump($details);
         $movie -> setRuntime($details->runtime);
-        //$movie -> setOriginCountry($details->origin_country);
-
+    
         $em->persist($movie);
                
          }
@@ -61,7 +54,6 @@ class MoviesController extends AbstractController
     }
 
 
-    // fetch tipo GET a  /getMovies?page=4
     /**
      * @Route("/getMovies", name="getMovies")
      */
@@ -107,7 +99,7 @@ class MoviesController extends AbstractController
         $details = [];
         $id = $request->query->get('id');
         $movieEntity = $repo->find($id);
-        // foreach($moviesEntitys as $movieEntity) {
+        
             $movie = [];
             $movie['id'] = $movieEntity->getId();
             $movie['title'] = $movieEntity->getTitle();
@@ -126,13 +118,8 @@ class MoviesController extends AbstractController
             $movie['writer'] = $movieEntity->getWriter();
             $movie['cast'] = $movieEntity->getCast();
             $movie['genre'] = $movieEntity->getGenre();
-
-            // $details[] = $movie;
-            dump($movie);
-        // }
-        return $this->json($movie);
-
-        
+  
+        return $this->json($movie);   
     }
 
     /**
@@ -167,7 +154,6 @@ class MoviesController extends AbstractController
             
         }
         return $this->json($movies);
-
-        
+   
     }
 }

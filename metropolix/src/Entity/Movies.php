@@ -428,7 +428,7 @@ class Movies
     public function removeComment(Comments $comment): self
     {
         if ($this->comments->removeElement($comment)) {
-            // set the owning side to null (unless already changed)
+            
             if ($comment->getMovie() === $this) {
                 $comment->setMovie(null);
             }
