@@ -19,7 +19,7 @@ class MoviesController extends AbstractController
     public function getMovies(EntityManagerInterface $em): Response
     {
         $httpClient = HttpClient::create();
-        $queryResponse = $httpClient->request('GET','https://api.themoviedb.org/3/movie/top_rated?api_key=73335406cba0f2d2b6be748d34df365b&language=en-US&page=10');
+        $queryResponse = $httpClient->request('GET','https://api.themoviedb.org/3/movie/top_rated?api_key=yourApiKey&language=en-US&page=10');
         // $data = json_decode();
         
 
@@ -39,11 +39,11 @@ class MoviesController extends AbstractController
              $movie -> setReleaseDate($m->release_date);
              $movie -> setVoteAverage($m->vote_average);
              $movie -> setVoteCount($m->vote_count);        
-             $movie -> setPosterPath('https://image.tmdb.org/t/p/w300/' . $m->poster_path . '?api_key=73335406cba0f2d2b6be748d34df365b&language=en-US');
-             $movie -> setBackdropPath('https://image.tmdb.org/t/p/w300/' . $m->backdrop_path . '?api_key=73335406cba0f2d2b6be748d34df365b&language=en-US');
+             $movie -> setPosterPath('https://image.tmdb.org/t/p/w300/' . $m->poster_path . '?api_key=7yourApiKey&language=en-US');
+             $movie -> setBackdropPath('https://image.tmdb.org/t/p/w300/' . $m->backdrop_path . '?api_key=7yourApiKey&language=en-US');
 
         $tmdb_id = $m->id;
-        $queryDetails = $httpClient->request('GET','https://api.themoviedb.org/3/movie/'. $tmdb_id  .'?api_key=73335406cba0f2d2b6be748d34df365b&language=en-US');
+        $queryDetails = $httpClient->request('GET','https://api.themoviedb.org/3/movie/'. $tmdb_id  .'?api_key=7yourApiKey&language=en-US');
         //  = json_decode();
         
         $details = $queryDetails->getContent();
