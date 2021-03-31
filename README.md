@@ -27,6 +27,7 @@ de los usuarios.
 4. Create database: php bin/console doctrine:database:create 
 5. Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 6. In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
+7. In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get the movies.
 ```
 ```
 See Deployment to know how to deploy the project. 
@@ -38,6 +39,7 @@ See Deployment to know how to deploy the project.
 4. Crear base de datos: php bin/console doctrine:database:create 
 5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 6. En el archivo .env en DATABASE_URL introduce tu usuario y contraseña y el nombre de la db si lo cambias
+7. En el archivo MoviesController.php tienes que usar tu propia api key de tmdb (the movie database) para poder hacer el get de las películas
 ```
 ```
 Mira Despliegue para conocer como desplegar el proyecto.
@@ -45,7 +47,6 @@ Mira Despliegue para conocer como desplegar el proyecto.
 
 ## Deployment / Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Built with / Construido con 🛠️
 
