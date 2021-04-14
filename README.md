@@ -1,8 +1,8 @@
 # MetropolixServer
 
 
-### Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
-### Proyecto final Bootcamp Full Stack Development en COdespace (Málaga).
+#### Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
+#### Proyecto final Bootcamp Full Stack Development en COdespace (Málaga).
 
 ## About this project... / Sobre este proyecto...
 
@@ -36,7 +36,7 @@ de los usuarios.
 
 
 * Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
-* Run composer install to install the components. 
+* Run [composer](https://getcomposer.org/) install to install the components. 
 * In the .env file, configure the database connection data and other necessary variables.  
 * Create database: php bin/console doctrine:database:create 
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
@@ -45,7 +45,7 @@ de los usuarios.
 
 
 * Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
-* Ejecutar composer install para instalar los componentes.  
+* Ejecutar [composer](https://getcomposer.org/) install para instalar los componentes.  
 * En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
 * Crear base de datos: php bin/console doctrine:database:create 
 * Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
