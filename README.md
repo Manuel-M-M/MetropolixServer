@@ -33,11 +33,10 @@ y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con 
 de los usuarios.
 
 Servicio creado para responder a todas las consultas realizadas por  
-[Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,  
-relationship%20in%20a % 20computadora% 20red.)(ReactJS en este caso) para mantener  
-los estándares lógicos y la eficiencia. Manipulando los recursos como GET,
-POST y DELETE para manejar datos, que devuelven una respuesta en formato JSON para una sencilla
-comprensión inicial.
+[Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations, relationship%20in%20a % 20computadora% 20red.)  
+(ReactJS en este caso) para mantener los estándares lógicos y la eficiencia. Manipulando  
+los recursos como GET, POST y DELETE para manejar datos, que devuelven una respuesta en  
+formato JSON para una sencilla comprensión inicial.
 
 Esta API es un conjunto de componentes reutilizables, por lo que se ha utilizado Symfony, que es uno de los más importantes
 frameworks de aplicaciones web en PHP. Pretende ser una fuente abierta para todos y capaz de
@@ -45,7 +44,7 @@ construir aplicaciones robustas en un contexto expresivo.
 
 ## Starting / Comenzando 🚀
 
-##### * Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
+##### Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
 * Clone the project to your local directory:
 ```` 
 * $git clone https://github.com/Manuel-M-M/MetropolixServer.git
@@ -57,7 +56,7 @@ construir aplicaciones robustas en un contexto expresivo.
 * $composer install
 ````
 * $php -S localhost:8000 -t public/  
-([PHP local server])(https://www.php.net/manual/en/features.commandline.webserver.php)   
+[PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)   
 * Create database: php bin/console doctrine:database:create 
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * In the .env file configure the database connection data and other necessary variables
