@@ -32,8 +32,7 @@ posibilidad de añadir comentarios sobre las películas, que serán visibles en 
 y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con el resto  
 de los usuarios.
 
-Servicio creado para responder a todas las consultas realizadas por  
-[Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,relationship%20in%20a%20computadora%20red.)  
+Servicio creado para responder a todas las consultas realizadas por [Client-side](https://en.wikipedia.org/wiki/Clientside#:~:text=Client%2Dside%20refers%20to%20operations,relationship%20in%20a%20computadora%20red.)  
 (ReactJS en este caso) para mantener los estándares lógicos y la eficiencia. Manipulando  
 los recursos como GET, POST y DELETE para manejar datos, que devuelven una respuesta en  
 formato JSON para una sencilla comprensión inicial.
