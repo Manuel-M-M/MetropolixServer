@@ -62,9 +62,9 @@ construir aplicaciones robustas en un contexto expresivo.
 * In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
 * In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get movies
 
-##### *  Ten en cuenta que debes tener instalado PHP ^7.2.5 y composer para seguir los siguientes pasos
-* Clonar repo:
-* ```` 
+##### Ten en cuenta que debes tener instalado PHP ^7.2.5 y composer para seguir los siguientes pasos
+* Clona el proyecto en tu fichero local:
+```` 
 * $git clone https://github.com/Manuel-M-M/MetropolixServer.git
 ````
 ````
@@ -74,7 +74,7 @@ construir aplicaciones robustas en un contexto expresivo.
 * $composer install
 ````
 $php -S localhost:8000 -t public/  
-([PHP local server])(https://www.php.net/manual/en/features.commandline.webserver.php)
+[PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)
 * Crear base de datos: php bin/console doctrine:database:create 
 * Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias
