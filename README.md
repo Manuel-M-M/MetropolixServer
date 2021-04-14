@@ -34,7 +34,9 @@ build robust applications in an expresive context.
 ````
  $composer install
 ````
-* $php -S localhost:8000 -t public/  
+````
+* $php -S localhost:8000 -t public/
+````  
 [PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)   
 * Create database: php bin/console doctrine:database:create 
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
