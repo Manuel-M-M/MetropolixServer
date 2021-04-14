@@ -46,7 +46,7 @@ build robust applications in an expresive context.
 
 ## Built with  🛠️
 
-PHP, SYMFONY, DOCTRINE, MYSQL
+PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 
 - [PHP](https://www.php.net/) - Programming language
 - [COMPOSER](https://getcomposer.org/) - Dependency manager for PHP  
