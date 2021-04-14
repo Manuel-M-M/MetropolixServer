@@ -35,27 +35,26 @@ de los usuarios.
 ## Starting / Comenzando 🚀
 
 
-1. Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
-2. Run composer install to install the components. 
-3. In the .env file, configure the database connection data and other necessary variables.  
-4. Create database: php bin/console doctrine:database:create 
-5. Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
-6. In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
-7. In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get the movie.
+* Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
+* Run composer install to install the components. 
+* In the .env file, configure the database connection data and other necessary variables.  
+* Create database: php bin/console doctrine:database:create 
+* Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
+* In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
+* In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get the movie.
 
 
-1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
-2. Ejecutar composer install para instalar los componentes.  
-3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
-4. Crear base de datos: php bin/console doctrine:database:create 
-5. Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
-6. En el archivo .env en DATABASE_URL introduce tu usuario y contraseña y el nombre de la db si lo cambias
-7. En el archivo MoviesController.php tienes que usar tu propia api key de tmdb (the movie database) para poder hacer el get de las películas
+* Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
+* Ejecutar composer install para instalar los componentes.  
+* En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
+* Crear base de datos: php bin/console doctrine:database:create 
+* Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
+* En el archivo .env en DATABASE_URL introduce tu usuario y contraseña y el nombre de la db si lo cambias
+* En el archivo MoviesController.php tienes que usar tu propia api key de tmdb (the movie database) para poder hacer el get de las películas
 
 ## Built with / Construido con 🛠️
 
 PHP, SYMFONY, DOCTRINE, MYSQL
-
 
 - [PHP](https://www.php.net/) - Programming language / Lenguaje de programación 
 - [SYMFONY](https://symfony.com/) - The framework used / El framework usado
@@ -63,11 +62,8 @@ PHP, SYMFONY, DOCTRINE, MYSQL
 - [MYSQL](https://www.mysql.com/) - Database / Base de datos
 
 ## Author / Autor ✒️
-```
+
  Manuel Moraga Molina
-
-
-
 
 ⌨️ with / con ❤️ by / por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
 
