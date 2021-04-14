@@ -1,6 +1,11 @@
 # MetropolixServer
 
 ```
+#### Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
+### Proyecto final Bootcamp Full Stack Development en COdespace (Málaga).
+
+## About this project... / Sobre este proyecto...
+```
 SERVER CODE. Web for lovers of good cinema. Movie search engine, filtered sections for the most popular  
 and best rated movies, details of each of them with image, video and all the necessary data so that you  
 know the film perfectly. For registered users, management of lists of favorite films, views and pending,  
