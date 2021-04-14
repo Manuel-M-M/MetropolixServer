@@ -34,8 +34,9 @@ de los usuarios.
 
 ## Starting / Comenzando 🚀
 
-
-* Clone repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
+##### * Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
+* Clone repo: $git clone https://github.com/Manuel-M-M/MetropolixServer.git
+* $cd MetropolixServer  
 * Run [composer](https://getcomposer.org/) install to install the components. 
 * In the .env file, configure the database connection data and other necessary variables.  
 * Create database: php bin/console doctrine:database:create 
