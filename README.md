@@ -25,7 +25,7 @@ build robust applications in an expresive context.
 ## Starting  🚀
 
 ##### Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
- Clone the project to your local directory:
+* Clone the project to your local directory:
 ```` 
  $git clone https://github.com/Manuel-M-M/MetropolixServer.git
 ````
