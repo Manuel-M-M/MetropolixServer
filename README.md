@@ -43,6 +43,7 @@ de los usuarios.
 6. In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
 7. In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get the movie.
 
+
 1. Clonar repo: git clone https://github.com/Manuel-M-M/MetropolixServer.git  
 2. Ejecutar composer install para instalar los componentes.  
 3. En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias.  
@@ -63,10 +64,10 @@ PHP, SYMFONY, DOCTRINE, MYSQL
 
 ## Author / Autor ✒️
 ```
-- Manuel Moraga Molina
-```
+ Manuel Moraga Molina
 
 
-```
+
+
 ⌨️ with / con ❤️ by / por [Manuel-M-M](https://github.com/Manuel-M-M) 😊
-```
+
