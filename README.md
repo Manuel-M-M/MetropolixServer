@@ -44,15 +44,15 @@ construir aplicaciones robustas en un contexto expresivo.
 ## Starting / Comenzando 🚀
 
 ##### Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
-* Clone the project to your local directory:
+ Clone the project to your local directory:
 ```` 
-* $git clone https://github.com/Manuel-M-M/MetropolixServer.git
+ $git clone https://github.com/Manuel-M-M/MetropolixServer.git
 ````
 ````
-* $cd MetropolixServer/metropolix  
+ $cd MetropolixServer/metropolix  
 ````
 ````
-* $composer install
+ $composer install
 ````
 * $php -S localhost:8000 -t public/  
 [PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)   
