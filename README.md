@@ -47,7 +47,8 @@ build robust applications in an expresive context.
 
 PHP, SYMFONY, DOCTRINE, MYSQL
 
-- [PHP](https://www.php.net/) - Programming language  
+- [PHP](https://www.php.net/) - Programming language
+- [COMPOSER](https://getcomposer.org/) - Dependency manager for PHP  
 - [SYMFONY](https://symfony.com/) - The framework used 
 - [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database 
 - [MYSQL](https://www.mysql.com/) - Database 
