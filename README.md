@@ -1,16 +1,26 @@
 # MetropolixServer
 
-```
-## Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
-##  Proyecto final Bootcamp Full Stack Development en COdespace (Málaga).
+
+### Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
+### Proyecto final Bootcamp Full Stack Development en COdespace (Málaga).
 
 ## About this project... / Sobre este proyecto...
+
 ```
 SERVER CODE. Web for lovers of good cinema. Movie search engine, filtered sections for the most popular  
 and best rated movies, details of each of them with image, video and all the necessary data so that you  
 know the film perfectly. For registered users, management of lists of favorite films, views and pending,  
 as well as the possibility of adding comments on the films, which will be visible in their details,  
-and access to the Metropolix real-time chat to exchange impressions with the rest of the users.
+and access to the Metropolix real-time chat to exchange impressions with the rest of the users.  
+
+Service created to respond all queries done by [Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,relationship%20in%20a%20computer%20network.)  
+(ReactJS in this case) to keep logical standards and efficiency. Manipulating the resources as GET,  
+POST and DELETE verbs to handle data, which return a response in JSON Format for a straight forward  
+Front-end understanding.
+
+This API is a set of reusable components, so it has been utilised Symfony which is one of the most important  
+web application frameworks in PHP. Being an open source to everyone and able to  
+build robust applications in an expresive context.
 ```
 ```
 CÓDIGO DE SERVIDOR. Web para amantes del buen cine. Buscador de películas,  
