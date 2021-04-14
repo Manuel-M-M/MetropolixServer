@@ -33,7 +33,7 @@ y acceso al chat en tiempo real de Metropolix para intercambiar impresiones con 
 de los usuarios.
 
 Servicio creado para responder a todas las consultas realizadas por  
-[Client-side] (https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,  
+[Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,  
 relationship%20in%20a % 20computadora% 20red.)(ReactJS en este caso) para mantener  
 los estándares lógicos y la eficiencia. Manipulando los recursos como GET,
 POST y DELETE para manejar datos, que devuelven una respuesta en formato JSON para una sencilla
@@ -46,10 +46,18 @@ construir aplicaciones robustas en un contexto expresivo.
 ## Starting / Comenzando 🚀
 
 ##### * Note that you should have installed PHP ^7.2.5 and composer to proceed with steps below
-* Clone the project to your local directory: 
+* Clone the project to your local directory:
+```` 
 * $git clone https://github.com/Manuel-M-M/MetropolixServer.git
+````
+````
 * $cd MetropolixServer/metropolix  
-* $composer install   
+````
+````
+* $composer install
+````
+* $php -S localhost:8000 -t public/  
+([PHP local server])(https://www.php.net/manual/en/features.commandline.webserver.php)   
 * Create database: php bin/console doctrine:database:create 
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * In the .env file configure the database connection data and other necessary variables
@@ -57,10 +65,18 @@ construir aplicaciones robustas en un contexto expresivo.
 * In the MoviesController.php file you need to use your own tmdb (the movie database) api key in order to get movies
 
 ##### *  Ten en cuenta que debes tener instalado PHP ^7.2.5 y composer para seguir los siguientes pasos
-* Clonar repo: 
+* Clonar repo:
+* ```` 
 * $git clone https://github.com/Manuel-M-M/MetropolixServer.git
-* $cd MetropolixServer/metropolix 
-* $composer install    
+````
+````
+* $cd MetropolixServer/metropolix
+````
+```` 
+* $composer install
+````
+$php -S localhost:8000 -t public/  
+([PHP local server])(https://www.php.net/manual/en/features.commandline.webserver.php)
 * Crear base de datos: php bin/console doctrine:database:create 
 * Importar archivo: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * En el archivo .env configurar los datos de conexión a base de datos y otras variables necesarias
