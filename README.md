@@ -56,13 +56,12 @@ configured by you to modify different features as wanted.
 
 PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 
-- [PHP](https://www.php.net/) - Programming language
-- [COMPOSER](https://getcomposer.org/) - Dependency manager for PHP  
+- [PHP](https://www.php.net/) - Programming language  
 - [SYMFONY](https://symfony.com/) - The framework used 
 - [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database 
 - [MYSQL](https://www.mysql.com/) - Database
 
-## How to build the pilars...
+## How to build the pillars...
 
 [Composer](https://getcomposer.org/) as main application-level package manager in PHP, it's a mandatory use it to shape your project adding dendencies as needed. All available bundles may be found at [packagist.org](https://packagist.org/) from getting started to New contributions.
 
