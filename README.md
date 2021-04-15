@@ -35,7 +35,7 @@ build robust applications in an expresive context.
  $composer install
 ````
 ````
-* $php -S localhost:8000 -t public/
+ $php -S localhost:8000 -t public/
 ````  
 [PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)   
 * Create database: php bin/console doctrine:database:create 
@@ -69,8 +69,6 @@ database more flexible by eliminating redundancy and inconsistent dependency.
  
 [MySQL](https://www.mysql.com/) is the service used to form relationships between tables, in wich you can use relationship types like One-to-One,  
 Many-to-One, One-to-Many and Many-to-Many to reach outcome required in each scenario.
-
-## Design...
 
 ##  PHPMyAdmin Support Locally... 
 
