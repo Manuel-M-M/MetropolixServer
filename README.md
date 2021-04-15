@@ -4,13 +4,11 @@
 
 ## About this project... 
 
-````
 SERVER CODE. Web for lovers of good cinema. Movie search engine, filtered sections for the most popular  
 and best rated movies, details of each of them with image, video and all the necessary data so that you  
 know the film perfectly. For registered users, management of lists of favorite films, views and pending,  
 as well as the possibility of adding comments on the films, which will be visible in their details,  
 and access to the Metropolix real-time chat with Firebase to exchange impressions with the rest of the users.  
-````
 
 Service created to respond all queries done by [Client-side](https://en.wikipedia.org/wiki/Client-side#:~:text=Client%2Dside%20refers%20to%20operations,relationship%20in%20a%20computer%20network.)  
 (ReactJS in this case) to keep logical standards and efficiency. Manipulating the resources as GET,  
@@ -73,11 +71,9 @@ PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 
 ## About this project...
 
-````
 Metropolix Database, it has been structured by following normalization process to organise data, creating columns,  
 keys and tables to establish relationships between them, gaining full protection in the data used and making the  
 database more flexible by eliminating redundancy and inconsistent dependency.
-````
 
 ## MySQL Database Schema...
  
