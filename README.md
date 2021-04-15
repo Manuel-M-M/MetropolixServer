@@ -1,7 +1,6 @@
-# MetropolixServer
+# Metropolix Server
 
-
-#### Final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
+#### Server for final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
 
 ## About this project... 
 
@@ -52,7 +51,19 @@ PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 - [COMPOSER](https://getcomposer.org/) - Dependency manager for PHP  
 - [SYMFONY](https://symfony.com/) - The framework used 
 - [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database 
-- [MYSQL](https://www.mysql.com/) - Database 
+- [MYSQL](https://www.mysql.com/) - Database
+
+# Metropolix Database MySQL
+
+#### Database for final project of Full Stack Development Bootcamp at CodeSpace(Málaga). 
+
+## About this project...
+
+````
+Metropolix Database, it has been structured by following normalization process to organise data, creating columns,  
+keys and tables to establish relationships between them, gaining full protection in the data used and making the  
+database more flexible by eliminating redundancy and inconsistent dependency.
+````
 
 ## Author  ✒️
 
