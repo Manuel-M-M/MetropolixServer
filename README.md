@@ -30,7 +30,7 @@ build robust applications in an expresive context.
  $git clone https://github.com/Manuel-M-M/MetropolixServer.git
 ````
 ````
- $cd MetropolixServer/metropolix  
+ $cd metropolix  
 ````
 ````
  $composer install
