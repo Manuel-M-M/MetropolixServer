@@ -43,7 +43,7 @@ build robust applications in an expresive context.
 * In the .env file configure the database connection data and other necessary variables
 * In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
 
-## Security in Back-end...
+## Security in Back End...
 
 #### 🔒🔒   API security is mission-critical to digital businesses as it is the most-frequent attack vector for enterprise web applications data breaches   🔒🔒
 
