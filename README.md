@@ -65,6 +65,13 @@ keys and tables to establish relationships between them, gaining full protection
 database more flexible by eliminating redundancy and inconsistent dependency.
 ````
 
+## MySQL Database Schema...
+ 
+MySQL is the service used to form relationships between tables, in wich you can use relationship types like One-to-One,  
+Many-to-One, One-to-Many and Many-to-Many to reach outcome required in each scenario.
+
+## Design...
+
 ## Author  ✒️
 
  Manuel Moraga Molina
