@@ -1,4 +1,4 @@
-# Metropolix Server
+# Metropolix API REST
 
 #### Server for final project of Full Stack Development Bootcamp at CodeSpace(Málaga).  
 
@@ -42,6 +42,15 @@ build robust applications in an expresive context.
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * In the .env file configure the database connection data and other necessary variables
 * In the .env file in DATABASE_URL enter your username and password and the name of the db if you change it
+
+## Security in Back-end...
+
+##### 🔒🔒   API security is mission-critical to digital businesses as it is the most-frequent attack vector for enterprise web applications data breaches   🔒🔒
+
+* Security access control has been set up in different paths to restrict any request to the API in users' areas are done by not registered.
+* Type Declarations in entities and each controller route, avoiding any data not required is passed on through the DDBB.
+* [JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle) Token authentication system to represent the user in a secure manner,  
+configured by you to modify different features as wanted.
 
 ## Built with  🛠️
 
