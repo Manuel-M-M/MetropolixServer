@@ -52,7 +52,7 @@ build robust applications in an expresive context.
 * [JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle) Token authentication system to represent the user in a secure manner,  
 configured by you to modify different features as wanted.
 
-## Built with  🛠️
+## Back End stack...  🛠️
 
 PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 
@@ -61,6 +61,12 @@ PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
 - [SYMFONY](https://symfony.com/) - The framework used 
 - [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database 
 - [MYSQL](https://www.mysql.com/) - Database
+
+## How to build the pilars...
+
+[Composer](https://getcomposer.org/) as main application-level package manager in PHP, it's a mandatory use it to shape your project adding dendencies as needed. All available bundles may be found at [packagist.org](https://packagist.org/) from getting started to New contributions.
+
+#### How to use it [here](https://getcomposer.org/doc/01-basic-usage.md)
 
 # Metropolix Database MySQL
 
