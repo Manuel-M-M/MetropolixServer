@@ -76,6 +76,10 @@ Many-to-One, One-to-Many and Many-to-Many to reach outcome required in each scen
 
 For a better overview of how things are in the Database and support any admin action, I opted for [PHPMyAdmin](https://www.phpmyadmin.net/) which is very handy in these cases as MySQL Database.
 
+## ❗❗ Please note ❗❗
+
+[LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) is the generic software stack model solution used in my case, but you can use another one to run the DDBB locally. [Download here](https://bitnami.com/stack/lamp/installer)!!
+
 ## Author  ✒️
 
  Manuel Moraga Molina
