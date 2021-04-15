@@ -52,12 +52,11 @@ configured by you to modify different features as wanted.
 
 ## Back End stack...  🛠️
 
-PHP, COMPOSER, SYMFONY, DOCTRINE, MYSQL
+PHP, SYMFONY, DOCTRINE
 
 - [PHP](https://www.php.net/) - Programming language  
 - [SYMFONY](https://symfony.com/) - The framework used 
 - [DOCTRINE](https://www.doctrine-project.org/) - Used to manage the database 
-- [MYSQL](https://www.mysql.com/) - Database
 
 ## How to build the pillars...
 
