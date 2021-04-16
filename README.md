@@ -36,7 +36,7 @@ build robust applications in an expresive context.
  $php -S localhost:8000 -t public/
 ````  
 [PHP local server](https://www.php.net/manual/en/features.commandline.webserver.php)
-* Intall [JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle)
+* Install [JWT Authentication Bundle](https://github.com/lexik/LexikJWTAuthenticationBundle)
 * Create database: php bin/console doctrine:database:create 
 * Import file: .sql php bin/console doctrine:database:import resources/sql/metropolix_db.sql
 * In the .env file configure the database connection data and other necessary variables
