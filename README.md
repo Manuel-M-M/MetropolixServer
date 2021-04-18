@@ -27,7 +27,7 @@ build robust applications in an expresive context.
  $git clone https://github.com/Manuel-M-M/MetropolixServer.git
 ````
 ````
- $cd metropolix  
+ $cd MetropolixServer  
 ````
 ````
  $composer install
