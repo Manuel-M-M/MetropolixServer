@@ -27,7 +27,6 @@ class MoviesController extends AbstractController
         $movies = $contentArray->results;
         
          foreach ($movies as $m) {
-           dump($movies);
              $movie = new Movies();
              $movie -> setTitle($m->title);
              $movie -> setOriginalLanguage($m->original_language);
@@ -44,11 +43,10 @@ class MoviesController extends AbstractController
         
         $details = $queryDetails->getContent();
         $details = json_decode($details);
-        dump($details);
+        
         $movie -> setRuntime($details->runtime);
         
-        $em->persist($movie);
-               
+        $em->persist($movie);   
          }
         
         $em->flush();
@@ -118,9 +116,6 @@ class MoviesController extends AbstractController
             $movie['writer'] = $movieEntity->getWriter();
             $movie['cast'] = $movieEntity->getCast();
             $movie['genre'] = $movieEntity->getGenre();
-
-            
-            dump($movie);
         
         return $this->json($movie);   
     }
@@ -158,5 +153,71 @@ class MoviesController extends AbstractController
             
         }
         return $this->json($movies);
+    }
+
+    /**
+     * @Route("/popular", name="popular")
+     */
+    public function index(MoviesRepository $repo): Response
+    {
+        $popularMovies = [];
+        $moviesPopular = $repo->findTop20Popularity();
+        foreach($moviesPopular as $moviePopular) {
+            $popularMovie = [];
+            $popularMovie['id'] = $moviePopular->getId();
+            $popularMovie['title'] = $moviePopular->getTitle();
+            $popularMovie['backdrop_path'] = $moviePopular->getBackdropPath();
+            $popularMovie['poster_path'] = $moviePopular->getPosterPath();
+            $popularMovie['original_language'] = $moviePopular->getOriginalLanguage();
+            $popularMovie['overview'] = $moviePopular->getOverview();
+            $popularMovie['popularity'] = $moviePopular->getPopularity();
+            $popularMovie['release_date'] = $moviePopular->getReleaseDate();
+            $popularMovie['video_path'] = $moviePopular->getVideoPath();
+            $popularMovie['vote_average'] = $moviePopular->getVoteAverage();
+            $popularMovie['vote_count'] = $moviePopular->getVoteCount();
+            $popularMovie['runtime'] = $moviePopular->getRuntime();
+            $popularMovie['origin_country'] = $moviePopular->getOriginCountry();
+            $popularMovie['director'] = $moviePopular->getDirector();
+            $popularMovie['writer'] = $moviePopular->getWriter();
+            $popularMovie['cast'] = $moviePopular->getCast();
+            $popularMovie['genre'] = $moviePopular->getGenre();
+
+            $popularMovies[] = $popularMovie;
+            
+        }
+        return $this->json($popularMovies);
+    }
+
+    /**
+     * @Route("/topRated", name="topRated")
+     */
+    public function index(MoviesRepository $repo): Response
+    {
+        $topRatedMovies = [];
+        $moviesTopRated = $repo->findTop20Popularity();
+        foreach($moviesTopRated as $movieTopRated) {
+            $topRatedMovie = [];
+            $topRatedMovie['id'] = $movieTopRated->getId();
+            $topRatedMovie['title'] = $movieTopRated->getTitle();
+            $topRatedMovie['backdrop_path'] = $movieTopRated->getBackdropPath();
+            $topRatedMovie['poster_path'] = $movieTopRated->getPosterPath();
+            $topRatedMovie['original_language'] = $movieTopRated->getOriginalLanguage();
+            $topRatedMovie['overview'] = $movieTopRated->getOverview();
+            $topRatedMovie['popularity'] = $movieTopRated->getPopularity();
+            $topRatedMovie['release_date'] = $movieTopRated->getReleaseDate();
+            $topRatedMovie['video_path'] = $movieTopRated->getVideoPath();
+            $topRatedMovie['vote_average'] = $movieTopRated->getVoteAverage();
+            $topRatedMovie['vote_count'] = $movieTopRated->getVoteCount();
+            $topRatedMovie['runtime'] = $movieTopRated->getRuntime();
+            $topRatedMovie['origin_country'] = $movieTopRated->getOriginCountry();
+            $topRatedMovie['director'] = $movieTopRated->getDirector();
+            $topRatedMovie['writer'] = $movieTopRated->getWriter();
+            $topRatedMovie['cast'] = $movieTopRated->getCast();
+            $topRatedMovie['genre'] = $movieTopRated->getGenre();
+
+            $topRatedMovies[] = $topRatedMovie;
+            
+        }
+        return $this->json($topRatedMovies);
     }
 }

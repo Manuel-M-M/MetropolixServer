@@ -10,7 +10,7 @@ use App\Entity\Comments;
 use \App\Repository\MoviesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 
-class CoomentsController extends AbstractController
+class ComentsController extends AbstractController
 {
     /**
      * @Route("/addComments/{id}", name="cooments")

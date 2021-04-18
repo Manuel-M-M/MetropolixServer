@@ -19,7 +19,6 @@ class MoviesRepository extends ServiceEntityRepository
         parent::__construct($registry, Movies::class);
     }
 
-    
 
     // /**
     //  * @return Movies[] Returns an array of Movies objects
@@ -60,7 +59,6 @@ class MoviesRepository extends ServiceEntityRepository
     //  * @return Details[] Returns an array of Movies objects
     //  */
     
-
     public function searchByTitle($title)
     {
         return $this->createQueryBuilder('m')
