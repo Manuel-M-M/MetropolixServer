@@ -61,7 +61,7 @@ PHP, SYMFONY, DOCTRINE
 
 ## How to build the pillars...
 
-[Composer](https://getcomposer.org/) as main application-level package manager in PHP, it's a mandatory use it to shape your project adding dendencies as needed. All available bundles may be found at [packagist.org](https://packagist.org/) from getting started to New contributions.
+[Composer](https://getcomposer.org/) as main application-level package manager in PHP, it's a mandatory use it to shape your project adding dependencies as needed. All available bundles may be found at [packagist.org](https://packagist.org/) from getting started to New contributions.
 
 #### How to use it [here](https://getcomposer.org/doc/01-basic-usage.md)
 
